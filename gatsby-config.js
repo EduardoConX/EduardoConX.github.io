@@ -33,7 +33,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["DotGothic16", "Montserrat"],
+          families: ["DotGothic16", "Poppins"],
         },
       },
     },

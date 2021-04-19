@@ -2,28 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .header{
-        @apply w-full h-screen absolute top-0 left-0;
-    }   
-  }
-
-  #terminal{
-    font-family: "DotGothic16",sans-serif;
-  }
-
-  #herramientas, #proyectos, footer{
-    font-family: "Montserrat",sans-serif;
-  }
-
-.background-header{
-background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.bw-image{
-  filter: grayscale(100%);
+#terminal{
+  font-family: "DotGothic16",sans-serif;
 }
 
-.color-image{
-  filter: grayscale(0%);
-}
