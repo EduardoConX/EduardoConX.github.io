@@ -1,0 +1,49 @@
+<header class="h-screen flex flex-col justify-center">
+  <div class="bg-colors w-4/5 rounded-xl mx-auto p-2">
+    <div
+      class="text-white rounded-xl text-center flex flex-col justify-between py-16 light-black"
+    >
+      <p class="uppercase text-lg font-medium tracking-4">
+        Hola mundo, soy
+      </p>
+      <h1 class="font-semibold poppins text-9xl my-4">Eduardo Pacheco</h1>
+      <p class="uppercase text-2xl font-medium">Desarrollador Web</p>
+    </div>
+  </div>
+</header>
+
+<style>
+  .bg-colors {
+    background: linear-gradient(
+        120deg,
+        rgb(4, 229, 229),
+        rgb(243, 112, 85),
+        rgb(239, 78, 123),
+        rgb(161, 102, 171),
+        rgb(80, 115, 184),
+        rgb(16, 152, 173),
+        rgb(7, 179, 155),
+        rgb(111, 186, 130)
+      )
+      0% 0% / 300% 300%;
+    animation: 3s ease-in-out 0s infinite normal none running border;
+  }
+  .light-black {
+    background-color: rgb(25, 25, 25);
+  }
+
+  /* Animaciones */
+  @keyframes border {
+    0% {
+      background-position: 15% 0%;
+    }
+
+    50% {
+      background-position: 85% 100%;
+    }
+
+    100% {
+      background-position: 15% 0%;
+    }
+  }
+</style>
