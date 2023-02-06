@@ -17,12 +17,16 @@ const { title } = Astro.props;
   </head>
   <body>
     <nav class="w-full light-black py-4 px-20 flex justify-between fixed">
-		<h1 class="basis-1/2 font-semibold text-3xl">EduardX</h1>
-		<ul class="flex justify-end text-xl">
-			<li class="mr-8">Proyectos</li>
-			<li>Contacto</li>
-		</ul>
-	</nav>
+      <a href="https://eduardoconx.github.io/">
+        <h1 class="basis-1/2 font-semibold text-3xl">EduardX</h1>
+      </a>
+      <ul class="flex justify-end text-xl">
+        <li class="mr-8">
+          <a href="#proyectos">Proyectos</a>
+        </li>
+        <li>Contacto</li>
+      </ul>
+    </nav>
     <slot />
   </body>
 </html>
@@ -38,11 +42,11 @@ const { title } = Astro.props;
   }
   html {
     font-family: system-ui, sans-serif;
-    min-width: 100vh;    
+    min-width: 100vh;
   }
   body {
     width: 100%;
-	color: aliceblue;
+    color: aliceblue;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
