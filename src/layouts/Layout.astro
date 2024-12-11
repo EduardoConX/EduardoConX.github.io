@@ -1,13 +1,13 @@
 ---
-export interface Props {
+interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="es" class="light-black">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -16,43 +16,6 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <nav class="w-full light-black py-4 px-20 flex justify-between fixed">
-      <a href="https://eduardoconx.github.io/">
-        <h1 class="basis-1/2 font-semibold text-3xl">EduardX</h1>
-      </a>
-      <ul class="flex justify-end text-xl">
-        <li class="mr-8">
-          <a href="#proyectos">Proyectos</a>
-        </li>
-        <li>Contacto</li>
-      </ul>
-    </nav>
     <slot />
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    min-width: 100vh;
-  }
-  body {
-    width: 100%;
-    color: aliceblue;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-  .light-black {
-    background-color: rgb(25, 25, 25);
-  }
-</style>

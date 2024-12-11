@@ -1,0 +1,64 @@
+---
+import SkillsList from "./SkillsList.astro";
+import React from "./icons/React.astro";
+import Next from "./icons/Next.astro";
+import Vue from "./icons/Vue.astro";
+import Angular from "./icons/Angular.astro";
+import Tailwind from "./icons/Tailwind.astro";
+
+import Node from "./icons/Node.astro";
+import Express from "./icons/Express.astro";
+import Nest from "./icons/Nest.astro";
+import Laravel from "./icons/Laravel.astro";
+import MySQL from "./icons/MySQL.astro";
+import Postgresql from "./icons/Postgresql.astro";
+
+const frontends = [
+  { name: "React" },
+  { name: "Next" },
+  { name: "Vue" },
+  { name: "Angular" },
+  { name: "Tailwind" },
+];
+const backends = [
+  { name: "Node" },
+  { name: "Express" },
+  { name: "Nest" },
+  { name: "Laravel" },
+  { name: "MySQL" },
+  { name: "Postgresql" },
+];
+---
+
+<section class="relative z-10 text-white h-screen">
+  <div class="w-4/5 max-w-6xl mx-auto px-4 py-16 space-y-16">
+    <h2 class="text-3xl font-bold mb-4">Tools I work with</h2>
+    <SkillsList skill="Frontend">
+      {
+        frontends.map((component) => (
+          <div class="hover:transform hover:scale-[1.1] transition-all duration-300 hover:cursor-pointer">
+            {component.name === "React" && <React />}
+            {component.name === "Next" && <Next />}
+            {component.name === "Vue" && <Vue />}
+            {component.name === "Angular" && <Angular />}
+            {component.name === "Tailwind" && <Tailwind />}
+          </div>
+        ))
+      }
+    </SkillsList>
+    <SkillsList skill="Backend">
+      {
+        backends.map((component) => (
+          <div class="hover:transform hover:scale-[1.1] transition-all duration-300 hover:cursor-pointer">
+            {component.name === "Node" && <Node />}
+            {component.name === "Express" && <Express />}
+            {component.name === "Nest" && <Nest />}
+            {component.name === "Laravel" && <Laravel />}
+            {component.name === "MySQL" && <MySQL />}
+            {component.name === "Postgresql" && <Postgresql />}
+          </div>
+        ))
+      }
+    </SkillsList>
+  </div>
+</section>

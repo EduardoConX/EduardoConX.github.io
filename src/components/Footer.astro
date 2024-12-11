@@ -1,22 +1,27 @@
-<footer class="w-full mt-8" id="contacto">
-  <h3 class="font-semibold text-4xl mb-6">Contacto</h3>
-  <ul class="flex flex-row text-2xl mb-8">
-    <li class="mr-4">
-      <a
-        href="mailto:eduardopachecoquintanar@gmail.com"
-        target="_blank"
-        rel="noopener">Email</a
-      >
-    </li>
-    <li class="mr-4">
-      <a href="http://github.com/eduardoConX" target="_blank" rel="noopener"
-        >GitHub</a>
-    </li>
-    <li>
-      <a
-        href="https://www.linkedin.com/in/eduardx"
-        target="_blank"
-        rel="noopener">LinkedIn</a>
-    </li>
-  </ul>
+---
+import Email from "./icons/Email.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import GitHub from "./icons/GitHub.astro";
+
+const contactMeans = [
+  { name: "Email", link: "mailto:eduardopachecoquintanar@gmail.com" },
+  { name: "LinkedIn", link: "https://www.linkedin.com/in/eduardx" },
+  { name: "GitHub", link: "https://github.com/EduardoConX" },
+];
+---
+
+<footer class="relative z-10 text-white">
+  <div class="max-w-6xl mx-auto px-4 py-16 space-y-16">
+    <div class="flex justify-center gap-4">
+      {
+        contactMeans.map((component) => (
+          <a href={component.link} target="_blank" rel="noopener noreferrer">
+            {component.name === "Email" && <Email />}
+            {component.name === "LinkedIn" && <LinkedIn />}
+            {component.name === "GitHub" && <GitHub />}
+          </a>
+        ))
+      }
+    </div>
+  </div>
 </footer>
