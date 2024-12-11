@@ -16,6 +16,8 @@ import Footer from "../components/Footer.astro";
         <h1 class="text-6xl font-bold mb-4">I'm Eduardo Pacheco</h1>
         <p class="text-3xl mb-4">Full stack developer</p>
         <button
+          type="button"
+          id="scroll-to-content"
           class="px-8 py-3 bg-white/10 backdrop:blur-sm rounded-full hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
           >Get To Know Me</button
         >
@@ -27,3 +29,11 @@ import Footer from "../components/Footer.astro";
   <Projects />
   <Footer />
 </Layout>
+
+<script>
+  const scrollButton = document.getElementById("scroll-to-content");
+  scrollButton?.addEventListener("click", () => {
+    const aboutMe = document.getElementById("about-me");
+    aboutMe?.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
