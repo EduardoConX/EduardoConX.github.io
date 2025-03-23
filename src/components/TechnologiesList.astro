@@ -5,6 +5,8 @@ import Express from "../icons/Express.astro";
 import MySQL from "../icons/MySQL.astro";
 import PHP from "../icons/PHP.astro";
 import Laravel from "../icons/Laravel.astro";
+import AstroJS from "../icons/Astro.astro";
+import Tailwind from "../icons/Tailwind.astro";
 
 interface Technology {
   name: string;
@@ -21,13 +23,15 @@ const { technologies } = Astro.props;
 <ul class="flex flex-wrap gap-2">
   {
     technologies.map(({ name, icon }) => (
-      <li class="flex gap-1 items-center border-solid rounded-md px-2 py-1 border border-blue-600 bg-blue-400/20 text-blue-600">
+      <li class="flex gap-1 items-center border-solid rounded-md px-2 py-1 border border-blue-600 bg-blue-500/10 text-blue-600">
         {icon === "Vue" && <Vue />}
         {icon === "Node" && <Node />}
         {icon === "Express" && <Express />}
         {icon === "MySQL" && <MySQL />}
         {icon === "PHP" && <PHP />}
         {icon === "Laravel" && <Laravel />}
+        {icon === "Astro" && <AstroJS />}
+        {icon === "Tailwind" && <Tailwind />}
         <span>{name}</span>
       </li>
     ))
