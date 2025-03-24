@@ -1,0 +1,109 @@
+---
+import HTML from "../icons/HTML.astro";
+import CSS from "../icons/CSS.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import GIT from "../icons/GIT.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Node from "../icons/Node.astro";
+import Express from "../icons/Express.astro";
+import Vue from "../icons/Vue.astro";
+import React from "../icons/React.astro";
+import AstroJS from "../icons/Astro.astro";
+import Laravel from "../icons/Laravel.astro";
+import MySQL from "../icons/MySQL.astro";
+import PHP from "../icons/PHP.astro";
+import Postgres from "../icons/Postgres.astro";
+
+const skills = [
+  {
+    name: "HTML",
+    icon: "HTML",
+  },
+  {
+    name: "CSS",
+    icon: "CSS",
+  },
+  {
+    name: "JavaScript",
+    icon: "JavaScript",
+  },
+  {
+    name: "TypeScript",
+    icon: "TypeScript",
+  },
+  {
+    name: "GIT",
+    icon: "GIT",
+  },
+  {
+    name: "Tailwind",
+    icon: "Tailwind",
+  },
+  {
+    name: "Node",
+    icon: "Node",
+  },
+  {
+    name: "Express",
+    icon: "Express",
+  },
+  {
+    name: "VueJS",
+    icon: "Vue",
+  },
+  {
+    name: "ReactJS",
+    icon: "React",
+  },
+  {
+    name: "Astro",
+    icon: "AstroJS",
+  },
+  {
+    name: "PHP",
+    icon: "PHP",
+  },
+  {
+    name: "Laravel",
+    icon: "Laravel",
+  },
+  {
+    name: "MySQL",
+    icon: "MySQL",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "Postgres",
+  },
+
+];
+---
+
+<section class="flex flex-col gap-4 mt-12">
+  <h3 class="text-3xl text-white">Skills</h3>
+  <ul class="inline-flex flex-wrap gap-6">
+    {
+      skills.map(({ name, icon }) => (
+        <li class="flex gap-1 items-center px-2 py-1  text-blue-600">
+          {icon === "HTML" && <HTML />}
+          {icon === "CSS" && <CSS />}
+          {icon === "JavaScript" && <JavaScript />}
+          {icon === "TypeScript" && <TypeScript />}
+          {icon === "GIT" && <GIT />}
+          {icon === "Tailwind" && <Tailwind />}
+          {icon === "Vue" && <Vue />}
+          {icon === "React" && <React />}
+          {icon === "AstroJS" && <AstroJS />}
+          {icon === "Node" && <Node />}
+          {icon === "Express" && <Express />}
+          {icon === "PHP" && <PHP />}
+          {icon === "Laravel" && <Laravel />}
+          {icon === "MySQL" && <MySQL />}
+          {icon === "Postgres" && <Postgres />}
+          <span class="text-gray-400">{name}</span>
+        </li>
+      ))
+    }
+  </ul>
+</section>
