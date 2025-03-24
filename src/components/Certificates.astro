@@ -1,0 +1,35 @@
+---
+const certificates = [
+  {
+    name: "AWS Certified Cloud Practitioner",
+    date: "April 2023",
+    url: "https://cp.certmetrics.com/amazon/en/public/verify/credential/4G3RD01271Q4Q9SE",
+  },
+  {
+    name: "AWS Certified Developer Associate",
+    date: "October 2023",
+    url: "https://cp.certmetrics.com/amazon/en/public/verify/credential/G1YX2M728BFE1Q5Z",
+  },
+  {
+    name: "AWS Certified Solutions Architect Associate",
+    date: "September 2024",
+    url: "https://cp.certmetrics.com/amazon/en/public/verify/credential/46e17e076d5b4b03a94d12b0c2e4efb9",
+  },
+];
+---
+
+<section class="flex flex-col gap-4 mt-12">
+  <h3 class="text-3xl text-white">Certificates</h3>
+  <ul class="flex flex-col gap-2">
+    {
+      certificates.map((certificate) => (
+        <li class="flex w-full justify-start gap-4">
+          <a class="text-white" href={certificate.url} target="_blank">
+            {certificate.name}
+          </a>
+          <span class="text-gray-400">{certificate.date}</span>
+        </li>
+      ))
+    }
+  </ul>
+</section>
