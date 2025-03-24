@@ -1,10 +1,67 @@
 ---
+import { Image } from "astro:assets";
+import blogConX from "../assets/blogConX.png";
+import pokedex from "../assets/eduardXPokedex.png";
+import TechnologiesList from "./TechnologiesList.astro";
 
+const projects = [
+  {
+    name: "Blog con X",
+    url: "https://eduardoconx.github.io/blog-con-x/",
+    image: blogConX,
+    description:
+      "Small blog where I share programming concepts that I find interesting.",
+    technologies: [
+      {
+        name: "Astro",
+        icon: "Astro",
+      },
+      {
+        name: "Tailwind",
+        icon: "Tailwind",
+      },
+    ],
+  },
+  {
+    name: "Pokedex",
+    url: "https://eduardx-pokedex.netlify.app/",
+    image: pokedex,
+    description:
+      "Project to keep track of the Pokémon I catch in the Discord game 'PokeTwo'",
+    technologies: [
+      {
+        name: "VueJS",
+        icon: "Vue",
+      },
+      {
+        name: "Tailwind",
+        icon: "Tailwind",
+      },
+    ],
+  },
+];
 ---
 
-<section class="relative z-10 text-white">
-  <div class="w-4/5 max-w-6xl mx-auto px-4 py-16 space-y-16">
-    <h2 class="text-3xl font-bold mb-4">Recent projects</h2>
-    <p>No recent projects to show</p>
+<section class="flex flex-col gap-6 mt-12">
+  <h3 class="text-3xl text-white">Projects</h3>
+  <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8">
+    {
+      projects.map((project) => (
+        <div class="flex flex-col rounded-md p-5 shadow-sm ring-1 ring-custom-light bg-custom-medium">
+          <a href={project.url} target="_blank">
+            <div>
+              <h5 class="text-white font-bold">{project.name}</h5>
+              <Image
+                src={project.image}
+                alt={project.name}
+                class="rounded-2xl py-3"
+              />
+            </div>
+          </a>
+          <p class="text-white text-sm py-3">{project.description}</p>
+          <TechnologiesList technologies={project.technologies} />
+        </div>
+      ))
+    }
   </div>
 </section>
