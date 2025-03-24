@@ -20,10 +20,10 @@ const certificates = [
 
 <section class="flex flex-col gap-4 mt-12">
   <h3 class="text-3xl text-white">Certificates</h3>
-  <ul class="flex flex-col gap-2">
+  <ul class="flex flex-col gap-4 md:gap-2">
     {
       certificates.map((certificate) => (
-        <li class="flex w-full justify-start gap-4">
+        <li class="flex flex-col md:flex-row w-full justify-start md:gap-4">
           <a class="text-white" href={certificate.url} target="_blank">
             {certificate.name}
           </a>
