@@ -1,38 +1,18 @@
 ---
-import Vue from "../icons/Vue.astro";
-import Node from "../icons/Node.astro";
-import Express from "../icons/Express.astro";
-import MySQL from "../icons/MySQL.astro";
-import PHP from "../icons/PHP.astro";
-import Laravel from "../icons/Laravel.astro";
-import AstroJS from "../icons/Astro.astro";
-import Tailwind from "../icons/Tailwind.astro";
-
-interface Technology {
-  name: string;
-  icon: string;
-}
-
 interface Props {
-  technologies: Technology[];
+  technologies: string[];
 }
 
 const { technologies } = Astro.props;
 ---
 
-<ul class="flex flex-wrap gap-2">
+<ul class="mt-5 flex flex-wrap gap-2">
   {
-    technologies.map(({ name, icon }) => (
-      <li class="flex gap-1 items-center border-solid rounded-md px-2 py-1 border border-blue-600 bg-blue-500/10 text-blue-600">
-        {icon === "Vue" && <Vue />}
-        {icon === "Node" && <Node />}
-        {icon === "Express" && <Express />}
-        {icon === "MySQL" && <MySQL />}
-        {icon === "PHP" && <PHP />}
-        {icon === "Laravel" && <Laravel />}
-        {icon === "Astro" && <AstroJS />}
-        {icon === "Tailwind" && <Tailwind />}
-        <span>{name}</span>
+    technologies.map((technology) => (
+      <li>
+        <span class="rounded-full border border-blue-400/25 bg-blue-400/5 px-3 py-1 text-xs text-blue-200">
+          {technology}
+        </span>
       </li>
     ))
   }
