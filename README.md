@@ -1,48 +1,123 @@
-# Astro Starter Kit: Basics
+# EduardoConX Portfolio
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Personal portfolio and professional website for Eduardo Pacheco, built with Astro and Tailwind CSS. The project is designed to showcase experience, projects, skills, and contact information in a modern, clean, and visually strong way.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## ✨ Overview
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This website functions as a professional landing page for a full stack developer, with sections for:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- Introduction / hero
+- Professional experience
+- Selected projects
+- Tech stack and tools
+- Certifications
+- Contact
 
-## 🚀 Project Structure
+The structure is intentionally simple, fast, and easy to maintain.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠 Tech Stack
+
+- Astro
+- Tailwind CSS
+- Vite
+- Sharp
+
+## 📁 Project Structure
 
 ```text
 /
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── BasicInfo.astro
+│   │   ├── Experience.astro
+│   │   ├── Projects.astro
+│   │   ├── Skills.astro
+│   │   ├── Certificates.astro
+│   │   └── Contact.astro
+│   ├── icons/
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
+├── astro.config.mjs
+├── package.json
+├── pnpm-lock.yaml
+├── README.md
+├── tsconfig.json
+└── .gitignore
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🚀 Installation
 
-## 🧞 Commands
+Clone the repository and install dependencies:
 
-All commands are run from the root of the project, from a terminal:
+```bash
+git clone https://github.com/EduardoConX/EduardoConX.github.io.git
+cd EduardoConX.github.io
+pnpm install
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## ▶️ Local Development
 
-## 👀 Want to learn more?
+Start the development server:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+pnpm dev
+```
+
+The app will be available at:
+
+```text
+http://localhost:4321
+```
+
+## 🏗️ Production Build
+
+Generate the production build:
+
+```bash
+pnpm build
+```
+
+To preview the compiled version locally:
+
+```bash
+pnpm preview
+```
+
+## 📦 Available Scripts
+
+```bash
+pnpm dev      # start the development server
+pnpm build    # generate the production build
+pnpm preview  # serve the build locally
+pnpm astro    # access the Astro CLI directly
+```
+
+## 🌐 Deployment
+
+This project is designed to be deployed on GitHub Pages or any static hosting provider compatible with Astro.
+
+## 👤 Author
+
+Eduardo Pacheco
+
+- GitHub: https://github.com/EduardoConX
+- LinkedIn: https://www.linkedin.com/in/eduardx/
+- Email: eduardopachecoquintanar@gmail.com
+
+## 📌 Notes
+
+This README can be expanded with more personalized content, such as:
+
+- a more detailed professional summary,
+- links to key projects,
+- deployment instructions specific to your hosting,
+- badges and portfolio metrics.
+
+If you want, I can also turn this into a more premium, more technical, or more GitHub-ready version.
