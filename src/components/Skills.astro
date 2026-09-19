@@ -1,109 +1,66 @@
 ---
-import HTML from "../icons/HTML.astro";
-import CSS from "../icons/CSS.astro";
-import JavaScript from "../icons/JavaScript.astro";
-import TypeScript from "../icons/TypeScript.astro";
-import GIT from "../icons/GIT.astro";
-import Tailwind from "../icons/Tailwind.astro";
-import Node from "../icons/Node.astro";
-import Express from "../icons/Express.astro";
-import Vue from "../icons/Vue.astro";
-import React from "../icons/React.astro";
-import AstroJS from "../icons/Astro.astro";
-import Laravel from "../icons/Laravel.astro";
-import MySQL from "../icons/MySQL.astro";
-import PHP from "../icons/PHP.astro";
-import Postgres from "../icons/Postgres.astro";
-
-const skills = [
-  {
-    name: "HTML",
-    icon: "HTML",
-  },
-  {
-    name: "CSS",
-    icon: "CSS",
-  },
-  {
-    name: "JavaScript",
-    icon: "JavaScript",
-  },
-  {
-    name: "TypeScript",
-    icon: "TypeScript",
-  },
-  {
-    name: "GIT",
-    icon: "GIT",
-  },
-  {
-    name: "Tailwind",
-    icon: "Tailwind",
-  },
-  {
-    name: "Node",
-    icon: "Node",
-  },
-  {
-    name: "Express",
-    icon: "Express",
-  },
-  {
-    name: "VueJS",
-    icon: "Vue",
-  },
-  {
-    name: "ReactJS",
-    icon: "React",
-  },
-  {
-    name: "Astro",
-    icon: "AstroJS",
-  },
-  {
-    name: "PHP",
-    icon: "PHP",
-  },
-  {
-    name: "Laravel",
-    icon: "Laravel",
-  },
-  {
-    name: "MySQL",
-    icon: "MySQL",
-  },
-  {
-    name: "PostgreSQL",
-    icon: "Postgres",
-  },
-
-];
+const skills = {
+  fronted: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "Tailwind",
+    "VueJS",
+    "ReactJS",
+    "Astro",
+  ],
+  backend: ["Node", "Express", "PHP", "Laravel", "MySQL", "PostgreSQL"],
+  otherTools: ["GIT"],
+};
 ---
 
-<section class="flex flex-col gap-4 mt-12">
-  <h3 class="text-3xl text-white">Skills</h3>
-  <ul class="inline-flex flex-wrap gap-6">
-    {
-      skills.map(({ name, icon }) => (
-        <li class="flex gap-1 items-center px-2 py-1  text-blue-600">
-          {icon === "HTML" && <HTML />}
-          {icon === "CSS" && <CSS />}
-          {icon === "JavaScript" && <JavaScript />}
-          {icon === "TypeScript" && <TypeScript />}
-          {icon === "GIT" && <GIT />}
-          {icon === "Tailwind" && <Tailwind />}
-          {icon === "Vue" && <Vue />}
-          {icon === "React" && <React />}
-          {icon === "AstroJS" && <AstroJS />}
-          {icon === "Node" && <Node />}
-          {icon === "Express" && <Express />}
-          {icon === "PHP" && <PHP />}
-          {icon === "Laravel" && <Laravel />}
-          {icon === "MySQL" && <MySQL />}
-          {icon === "Postgres" && <Postgres />}
-          <span class="text-gray-400">{name}</span>
-        </li>
-      ))
-    }
-  </ul>
+<section
+  class="grid gap-12 border-t border-white/10 py-20 lg:grid-cols-[0.37fr_0.63fr]"
+>
+  <div>
+    <p class="font-mono text-xs uppercase tracking-[0.2em] text-blue-300">
+      04 / Toolkit
+    </p><h2 class="mt-4 text-4xl font-semibold tracking-tight text-white">
+      The tools behind the magic.
+    </h2>
+  </div><div class="grid gap-8 sm:grid-cols-3">
+    <div>
+      <p class="mb-4 text-sm font-medium text-white">Frontend</p><div
+        class="flex flex-wrap gap-2"
+      >
+        {
+          skills.fronted.map((frontendSkill) => (
+            <span class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-400 transition hover:border-blue-400/40 hover:text-blue-200">
+              {frontendSkill}
+            </span>
+          ))
+        }
+      </div>
+    </div><div>
+      <p class="mb-4 text-sm font-medium text-white">Backend &amp; data</p><div
+        class="flex flex-wrap gap-2"
+      >
+        {
+          skills.backend.map((backendSkill) => (
+            <span class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-400 transition hover:border-blue-400/40 hover:text-blue-200">
+              {backendSkill}
+            </span>
+          ))
+        }
+      </div>
+    </div><div>
+      <p class="mb-4 text-sm font-medium text-white">Other tools</p><div
+        class="flex flex-wrap gap-2"
+      >
+        {
+          skills.otherTools.map((otherSkill) => (
+            <span class="rounded-lg border border-white/10 px-3 py-2 text-sm text-slate-400 transition hover:border-blue-400/40 hover:text-blue-200">
+              {otherSkill}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </section>
