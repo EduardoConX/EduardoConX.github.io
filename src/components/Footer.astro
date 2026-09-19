@@ -2,17 +2,30 @@
 import Github from "../icons/Github.astro";
 import Linkedin from "../icons/Linkedin.astro";
 import Mail from "../icons/Mail.astro";
-import InfoLink from "./InfoLink.astro";
 ---
 
-<footer class="flex mt-2 w-full gap-1 justify-center pb-12">
-  <InfoLink href="mailto:eduardopachecoquintanar@gmail.com">
-    <Mail />
-  </InfoLink>
-  <InfoLink href="mailto:eduardopachecoquintanar@gmail.com">
-    <Linkedin />
-  </InfoLink>
-  <InfoLink href="mailto:eduardopachecoquintanar@gmail.com">
-    <Github />
-  </InfoLink>
+<footer
+  class="flex flex-col gap-5 border-t border-white/10 px-6 py-8 mx-auto text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between"
+>
+  <p>© {new Date().getFullYear()} Eduardo Pacheco. Built with care.</p><div
+    class="flex gap-4"
+  >
+    <a
+      aria-label="GitHub"
+      href="https://github.com/EduardoConX/EduardoConX/"
+      target="_blank"
+      class="transition hover:text-white"><Github /></a
+    ><a
+      aria-label="LinkedIn"
+      href="https://www.linkedin.com/in/eduardx/"
+      target="_blank"
+      class="transition hover:text-white"><Linkedin /></a
+    ><a
+      aria-label="Email"
+      href="mailto:eduardopachecoquintanar@gmail.com"
+      class="transition hover:text-white"
+    >
+      <Mail />
+    </a>
+  </div>
 </footer>

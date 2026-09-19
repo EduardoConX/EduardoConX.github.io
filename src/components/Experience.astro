@@ -9,25 +9,8 @@ const experienceList = [
     company: "Blue People",
     companyLink: "https://bluepeople.com",
     summary:
-      "Development of custom web applications for clients in several areas. Development and integration of software for peripherals such as ticket printers, label printers, card payment terminals, etc.",
-    technologies: [
-      {
-        name: "VueJS",
-        icon: "Vue",
-      },
-      {
-        name: "Node",
-        icon: "Node",
-      },
-      {
-        name: "Express",
-        icon: "Express",
-      },
-      {
-        name: "MySQL",
-        icon: "MySQL",
-      },
-    ],
+      "Developing custom web applications for clients across several industries, including integrations with ticket printers, label printers, and card payment terminals.",
+    technologies: ["VueJS", "Node", "Express", "MySQL"],
   },
   {
     startDate: "Aug 2021",
@@ -36,13 +19,8 @@ const experienceList = [
     company: "Link México",
     companyLink: "https://linkitmexico.com/",
     summary:
-      "Development of the website for the companies like bits&birds, applab mx and Linkit México",
-    technologies: [
-      {
-        name: "VueJS",
-        icon: "Vue",
-      },
-    ],
+      "Built and maintained websites for brands including bits&birds, applab mx, and Linkit México.",
+    technologies: ["VueJS"],
   },
   {
     startDate: "Jan 2020",
@@ -51,32 +29,25 @@ const experienceList = [
     company: "DataTics",
     companyLink: "https://datatics.com.mx/",
     summary:
-      "Design and development of the payment system of the company DataTics",
-    technologies: [
-      {
-        name: "VueJS",
-        icon: "Vue",
-      },
-      {
-        name: "PHP",
-        icon: "PHP",
-      },
-      {
-        name: "Laravel",
-        icon: "Laravel",
-      },
-      {
-        name: "MySQL",
-        icon: "MySQL",
-      },
-    ],
+      "Designed and developed the company payment system with a focus on dependable workflows and maintainable interfaces.",
+    technologies: ["VueJS", "PHP", "Laravel", "MySQL"],
   },
 ];
 ---
 
-<section class="w-full flex flex-col gap-4 md:w-2/3">
-  <h3 class="text-3xl text-white">Experience</h3>
-  <ul class="flex flex-col gap-6">
+<section
+  id="experience"
+  class="grid gap-12 border-t border-white/10 py-20 lg:grid-cols-[0.37fr_0.63fr]"
+>
+  <div>
+    <p class="font-mono text-xs uppercase tracking-[0.2em] text-blue-300">
+      02 / Experience
+    </p><h2
+      class="mt-4 max-w-xs text-4xl font-semibold tracking-tight text-white"
+    >
+      A track record of thoughtful delivery.
+    </h2>
+  </div><ul class="flex flex-col gap-10">
     {
       experienceList.map((experience) => (
         <ExperienceItem experience={experience} />

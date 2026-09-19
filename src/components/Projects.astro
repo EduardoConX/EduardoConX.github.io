@@ -1,8 +1,7 @@
 ---
-import { Image } from "astro:assets";
 import blogConX from "../assets/blogConX.png";
 import pokedex from "../assets/eduardxPokedex.png";
-import TechnologiesList from "./TechnologiesList.astro";
+import Project from "./Project.astro";
 
 const projects = [
   {
@@ -11,16 +10,7 @@ const projects = [
     image: blogConX,
     description:
       "Small blog where I share programming concepts that I find interesting.",
-    technologies: [
-      {
-        name: "Astro",
-        icon: "Astro",
-      },
-      {
-        name: "Tailwind",
-        icon: "Tailwind",
-      },
-    ],
+    technologies: ["Astro", "Tailwind"],
   },
   {
     name: "Pokedex",
@@ -28,39 +18,27 @@ const projects = [
     image: pokedex,
     description:
       "Project to keep track of the Pokémon I catch in the Discord game 'PokeTwo'",
-    technologies: [
-      {
-        name: "VueJS",
-        icon: "Vue",
-      },
-      {
-        name: "Tailwind",
-        icon: "Tailwind",
-      },
-    ],
+    technologies: ["VueJS", "Tailwind", "Firebase"],
   },
 ];
 ---
 
-<section class="flex flex-col gap-6 mt-12">
-  <h3 class="text-3xl text-white">Projects</h3>
-  <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8">
+<section id="work" class="border-t border-white/10 py-20">
+  <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+    <div>
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-blue-300">
+        03 / Selected work
+      </p><h2 class="mt-4 text-4xl font-semibold tracking-tight text-white">
+        Things I've shipped.
+      </h2>
+    </div><p class="max-w-sm text-sm leading-6 text-slate-400">
+      A few projects where product thinking, engineering, and a little curiosity
+      meet.
+    </p>
+  </div><div class="mt-10 grid gap-6 lg:grid-cols-2">
     {
-      projects.map((project) => (
-        <div class="flex flex-col rounded-md p-5 shadow-sm ring-1 ring-custom-light bg-custom-medium">
-          <a href={project.url} target="_blank">
-            <div>
-              <h5 class="text-white font-bold">{project.name}</h5>
-              <Image
-                src={project.image}
-                alt={project.name}
-                class="rounded-2xl py-3"
-              />
-            </div>
-          </a>
-          <p class="text-white text-sm py-3">{project.description}</p>
-          <TechnologiesList technologies={project.technologies} />
-        </div>
+      projects.map((project, index) => (
+        <Project project={project} index={index} />
       ))
     }
   </div>

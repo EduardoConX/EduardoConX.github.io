@@ -1,6 +1,8 @@
 ---
 import WhiteGradient from "../components/WhiteGradient.astro";
+import NavBar from "../components/NavBar.astro";
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -14,7 +16,9 @@ import "../styles/global.css";
   </head>
   <body class="min-h-screen bg-custom-dark text-slate-100">
     <WhiteGradient />
+    <NavBar />
     <slot />
+    <Footer />
   </body>
 </html>
 
