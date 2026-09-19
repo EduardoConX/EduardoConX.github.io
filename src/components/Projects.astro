@@ -1,8 +1,6 @@
 ---
-import { Image } from "astro:assets";
 import blogConX from "../assets/blogConX.png";
 import pokedex from "../assets/eduardxPokedex.png";
-import TechnologiesList from "./TechnologiesList.astro";
 import Project from "./Project.astro";
 
 const projects = [
@@ -45,23 +43,3 @@ const projects = [
     }
   </div>
 </section>
-
-<!-- <section class="flex flex-col gap-6 mt-12">
-  <h3 class="text-3xl text-white">Projects</h3>
-  <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8">
-    {
-      projects.map((project) => (
-        <div class="flex flex-col rounded-md p-5 shadow-sm ring-1 ring-custom-light bg-custom-medium">
-          <a href={project.url} target="_blank">
-            <div>
-              <h5 class="text-white font-bold">{project.name}</h5>
-              
-            </div>
-          </a>
-          <p class="text-white text-sm py-3">{project.description}</p>
-          <TechnologiesList technologies={project.technologies} />
-        </div>
-      ))
-    }
-  </div>
-</section> -->

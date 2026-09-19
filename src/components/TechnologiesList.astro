@@ -1,18 +1,21 @@
 ---
 interface Props {
   technologies: string[];
+  version: string;
 }
 
-const { technologies } = Astro.props;
+const { technologies, version } = Astro.props;
+const computedClass =
+  version === "V2"
+    ? "bg-white/8 px-3 py-1 text-xs text-slate-300"
+    : "border border-blue-400/25 bg-blue-400/5 px-3 py-1 text-xs text-blue-200";
 ---
 
 <ul class="mt-5 flex flex-wrap gap-2">
   {
     technologies.map((technology) => (
       <li>
-        <span class="rounded-full border border-blue-400/25 bg-blue-400/5 px-3 py-1 text-xs text-blue-200">
-          {technology}
-        </span>
+        <span class={`rounded-full ${computedClass}`}>{technology}</span>
       </li>
     ))
   }

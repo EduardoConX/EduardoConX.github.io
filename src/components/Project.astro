@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import UpRightV2 from "../icons/UpRightV2.astro";
-import TechnologiesListV2 from "./TechnologiesListV2.astro";
+import UpRight from "../icons/UpRight.astro";
+import TechnologiesList from "./TechnologiesList.astro";
 
 interface Project {
   name: string;
@@ -41,10 +41,10 @@ const indexString = (index + 1).toString().padStart(2, "0");
         </p> -->
         <h3 class="mt-2 text-2xl font-medium text-white">{project.name}</h3>
       </div>
-      <UpRightV2 />
+      <UpRight />
     </div><p class="mt-4 leading-7 text-slate-400">
       {project.description}
     </p>
-    <TechnologiesListV2 technologies={project.technologies} />
+    <TechnologiesList technologies={project.technologies} version="V2" />
   </div>
 </a>
