@@ -1,26 +1,6 @@
 ---
-import blogConX from "../assets/blogConX.png";
-import pokedex from "../assets/eduardxPokedex.png";
 import Project from "./Project.astro";
-
-const projects = [
-  {
-    name: "Blog con X",
-    url: "https://eduardoconx.github.io/blog-con-x/",
-    image: blogConX,
-    description:
-      "Small blog where I share programming concepts that I find interesting.",
-    technologies: ["Astro", "Tailwind"],
-  },
-  {
-    name: "Pokedex",
-    url: "https://eduardx-pokedex.netlify.app/",
-    image: pokedex,
-    description:
-      "Project to keep track of the Pokémon I catch in the Discord game 'PokeTwo'",
-    technologies: ["VueJS", "Tailwind", "Firebase"],
-  },
-];
+import { projects } from "../consts";
 ---
 
 <section id="work" class="border-t border-white/10 py-20">
