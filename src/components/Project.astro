@@ -7,6 +7,7 @@ interface Project {
   name: string;
   image: ImageMetadata;
   description: string;
+  url: string;
   technologies: string[];
 }
 
@@ -20,7 +21,8 @@ const indexString = (index + 1).toString().padStart(2, "0");
 ---
 
 <a
-  href="#contact"
+  href={project.url}
+  target="_blank"
   class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] transition hover:-translate-y-1 hover:border-blue-400/40 hover:bg-white/6"
   ><div class="relative aspect-[1.75] overflow-hidden bg-slate-900">
     <Image
