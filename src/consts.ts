@@ -40,7 +40,7 @@ export const experienceList = [
 export const projects = [
   {
     name: "Blog con X",
-    url: "https://eduardoconx.github.io/blog-con-x/",
+    url: "https://eduardoconx.dev/blog-con-x/",
     image: blogConX,
     description:
       "Small blog where I share programming concepts that I find interesting.",
