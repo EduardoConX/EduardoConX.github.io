@@ -20,3 +20,5 @@ minimumReleaseAgeExclude:
   - nanoid@3.3.18
   - postcss@8.5.18
   - svgo@4.0.2
+overrides:
+  http-cache-semantics@<=4.2.0: ^4.3.0
