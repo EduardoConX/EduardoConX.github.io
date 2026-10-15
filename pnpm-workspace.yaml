@@ -22,3 +22,6 @@ minimumReleaseAgeExclude:
   - svgo@4.0.2
 overrides:
   http-cache-semantics@<=4.2.0: ^4.3.0
+  sharp@<0.35.5: ^0.35.5
+  smol-toml@<=1.8.0: ^1.9.0
+  source-map-js@>=1.0.0 <1.2.2: ^1.2.2
