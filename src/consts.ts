@@ -1,8 +1,8 @@
 import blogConX from "./assets/blogConX.png";
 import pokedex from "./assets/eduardxPokedex.png";
+import myFinancialApp from "./assets/myFinancialApp.png";
 
 //Experience
-
 export const experienceList = [
   {
     startDate: "Nov 2021",
@@ -52,6 +52,14 @@ export const projects = [
     image: pokedex,
     description:
       "Project to keep track of the Pokémon I catch in the Discord game 'PokeTwo'",
+    technologies: ["VueJS", "Tailwind", "Firebase"],
+  },
+  {
+    name: "My Financial App",
+    url: "https://my-financial-app-x.netlify.app/",
+    image: myFinancialApp,
+    description:
+      "A personal finance dashboard for tracking investments and their cash movements",
     technologies: ["VueJS", "Tailwind", "Firebase"],
   },
 ];
